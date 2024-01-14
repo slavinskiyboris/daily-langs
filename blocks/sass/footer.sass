@@ -1,0 +1,33 @@
+@use '../../blocks/mixin/medium-text'
+@use '../mixin/effects'
+
+.footer
+  background-color: #C05AFF
+  margin-block-start: 57px
+  padding-block-start: 55px
+  padding-block-end: 55px
+  &__content
+    display: flex
+    justify-content: space-between
+    margin-block-end: 52px
+    align-items: center
+    margin-left: 120px
+    margin-right: 120px
+  &__links
+    display: flex
+    flex-direction: column
+    gap: 13px
+  &__link
+    color: #FFFFFF
+    text-decoration: none
+    @include medium-text.medium-text
+    @include effects.focus
+    @include effects.focus-visible
+    @include effects.hover
+  &__logo
+    width: 223px
+    height: 43px
+  &__copyright
+    text-align: center
+    color: #FFFFFF
+    @include medium-text.medium-text

@@ -1,0 +1,51 @@
+@use '../../blocks/mixin/semiBold-text'
+@use '../mixin/effects'
+
+.main
+  display: flex
+  gap: 80px
+  justify-content: space-around
+  margin-left: 120px
+  margin-right: 120px
+  &__button
+    width: 200px
+    height: 51px
+    border-radius: 100px
+    background: #C05AFF
+    color: #FFF
+    border: none
+    cursor: pointer
+    margin-block-end: 76px
+    @include semiBold-text.semiBold-text
+    @include effects.focus
+    @include effects.focus-visible
+    @include effects.hover
+  &__arrow
+    width: 15px
+    height: 7.5px
+  &__forms
+    width: 200px
+  &__form
+    display: flex
+    flex-direction: column
+    gap: 20px
+    width: 500px
+    padding: 20px
+    padding-left: 0
+  &__fieldset
+    display: grid
+    border: none
+    padding: 0
+  &__label
+    display: block
+    font-weight: 800
+    font-size: 12px
+    &:not(:last-child)
+      margin-bottom: 10px
+  &__label &__span
+    display: inline-block
+    width: 18px
+    height: 18px
+    margin-right: 5px
+    vertical-align: middle
+    border: 1px solid #C05AFF

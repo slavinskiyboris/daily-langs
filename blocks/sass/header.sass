@@ -1,0 +1,87 @@
+@use '../../blocks/mixin/medium-text'
+@use '../../blocks/mixin/semiBold-text'
+@use '../mixin/effects'
+@use '../mixin/media'
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-block-start: 48px
+  margin-block-end: 67px
+  margin-left: 120px
+  margin-right: 120px
+  &__logo
+    width: 223px
+    height: 43px
+  &__nav
+    align-items: center
+    display: flex
+    @include media.mediaTablet
+        display: none
+        flex-direction: column
+        position: fixed
+        height: 100%
+        width: 100%
+        inset: 0
+        z-index: 50
+        overflow-y: auto
+        background-color: #FFFFFF
+        animation: burgerAnimation 0.5s
+        padding: 100px 100px
+  &__ul
+    display: flex
+    column-gap: 71px
+    @include media.mediaTablet
+      flex-direction: column
+      row-gap: 30px
+  &__text
+    color: #000
+    text-decoration: none
+    @include medium-text.medium-text
+    @include effects.focus
+    @include effects.focus-visible
+    @include effects.hover
+  &__span
+    color: #C05AFF
+  &__div
+    display: flex
+    gap: 61px
+  &__container
+    display: flex
+    gap: 21px
+    align-items: center
+  &__button-search
+    background: url("../../svg/search.svg") no-repeat center
+    background-size: cover
+    width: 31px
+    height: 31px
+    border: none
+    cursor: pointer
+    @include effects.focus
+    @include effects.focus-visible
+    @include effects.hover
+    @include media.mediaTablet
+      display: none
+  &__user
+    width: 51px
+    height: 51px
+    background-color: #C05AFF
+    border-radius: 50px
+    &_item
+      width: 51px
+      height: 51px
+      fill: #FFF
+  &__arrow
+    width: 15px
+    height: 7.5px
+  &__button-language
+    color: #000
+    background-color: transparent
+    border: none
+    cursor: pointer
+    @include semiBold-text.semiBold-text
+    @include effects.focus
+    @include effects.focus-visible
+    @include effects.hover
+    @include media.mediaTablet
+      display: none

@@ -1,0 +1,110 @@
+@use '../../blocks/mixin/extraBold-text'
+@use '../../blocks/mixin/semiBold-text'
+@use '../../blocks/mixin/medium-text'
+@use '../mixin/effects'
+
+.card
+  width: 400px
+  height: 341px
+  background-color: #C05AFF
+  border-radius: 30px
+  padding: 24px 21px 11px 22px
+  position: relative
+  z-index: 1
+  &__title
+    color: #FFFFFF
+    @include extraBold-text.extraBold-text
+    font-size: 24px
+  &__span
+    color: #FFFD50
+  &__name
+    width: 184px
+    height: 32px
+    margin-block-start: 19px
+    background: #C9FF50
+    border-radius: 60px
+    margin-left: 120px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+  &__idea
+    color: #000
+    @include semiBold-text.semiBold-text
+    text-align: center
+    font-size: 14px
+  &__idea-arrow
+    width: 18px
+    height: 18px
+    position: absolute
+    top: 25px
+    left: -10px
+  &__price
+    margin-block-start: 50px
+    margin-left: 90px
+    margin-block-end: 37px
+    position: relative
+  &__newPrice
+    color: #FFFFFF
+    @include extraBold-text.extraBold-text
+    font-size: 40px
+    text-align: center
+    //padding-left: 30px
+  &__oldPrice
+    color: #FFFFFF
+    @include extraBold-text.extraBold-text
+    font-size: 20px
+    text-align: center
+    padding-left: 120px
+    text-decoration: red line-through
+  &__discount
+    color: #FFFFFF
+    @include semiBold-text.semiBold-text
+    font-size: 10px
+    width: 48px
+    height: 18px
+    text-align: center
+    border-radius: 199px
+    background: #FF50BA
+    position: absolute
+    top: 30px
+    right: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__container
+    display: flex
+    gap: 5px
+    align-items: end
+    justify-content: flex-end
+  &__about
+    color: #FFFFFF
+    @include medium-text.medium-text
+    @include effects.hover
+    @include effects.focus
+    @include effects.focus-visible
+    text-decoration: none
+    //padding-top: 130px
+  &__arrow
+    width: 18px
+    height: 18px
+  &__flag
+    width: 66px
+    height: 66px
+    position: absolute
+    top: calc(263px - 24px)
+    left: calc(144px - 22px)
+  &__girl
+    width: 213px
+    height: 255px
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: -1
+  &__image
+    position: absolute
+    width: 234px
+    height: 154px
+    top: 35px
+    left: 120px
+    z-index: -2

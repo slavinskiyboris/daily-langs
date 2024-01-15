@@ -1,12 +1,27 @@
 @use '../../blocks/mixin/semiBold-text'
 @use '../mixin/effects'
+@use '../mixin/media'
 
 .main
   display: flex
   gap: 80px
   justify-content: space-around
   margin-left: 120px
-  margin-right: 120px
+  //margin-right: 120px
+  position: relative
+  @include media.mediaLaptop
+    flex-direction: column
+    margin: auto
+  @include media.mediaTablet
+    gap: 30px
+    overflow: hidden
+  &__cards
+    position: relative
+    overflow: hidden
+    min-height: 880px
+    @include media.mediaMobile
+      min-height: 837px
+      position: static
   &__button
     width: 200px
     height: 51px
@@ -20,18 +35,81 @@
     @include effects.focus
     @include effects.focus-visible
     @include effects.hover
+    @include media.mediaMobile
+      width: 154px
+      height: 43px
+      font-size: 14px
+  &__form-text
+    color: #000
+    @include semiBold-text.semiBold-text
+  &__filter
+    background-color: #C05AFF
+    width: 46px
+    height: 46px
+    border-radius: 50px
+    border: none
+    display: none
+    cursor: pointer
+    @include effects.focus
+    @include effects.focus-visible
+    @include media.mediaTablet
+      display: block
+  &__filter-ico
+    width: 34px
+    height: 49px
+  &__lines
+    position: absolute
+    left: -101px
+    width: 217px
+    height: 267px
+    bottom: -47px
+    @include media.mediaTablet
+      display: none
+  &__ellipse
+    width: 400px
+    height: 500px
+    position: absolute
+    top: -13px
+    right: -90px
+    @include media.mediaTablet
+      display: none
+  &__star
+    width: 155px
+    height: 143px
+    position: absolute
+    bottom: 9px
+    right: 18px
+    @include media.mediaMobile
+      inset: 0
+      width: 79px
+      height: 79px
+      top: 16px
+      left: 315px
   &__arrow
     width: 15px
     height: 7.5px
   &__forms
-    width: 200px
+    width: 220px
+    @include media.mediaLaptop
+      display: flex
+      width: auto
+      justify-content: space-around
+      gap: 5px
+    @include media.mediaTablet
+      justify-content: left
+      margin-left: 15px
+      height: 45px
   &__form
     display: flex
     flex-direction: column
     gap: 20px
-    width: 500px
-    padding: 20px
+    width: 235px
+    padding-top: 30px
+    padding-bottom: 30px
     padding-left: 0
+  &__form-container
+    @include media.mediaTablet
+      display: none
   &__fieldset
     display: grid
     border: none
@@ -40,8 +118,9 @@
     display: block
     font-weight: 800
     font-size: 12px
+    @include semiBold-text.semiBold-text
     &:not(:last-child)
-      margin-bottom: 10px
+      margin-bottom: 11px
   &__label &__span
     display: inline-block
     width: 18px

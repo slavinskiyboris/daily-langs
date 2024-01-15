@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Langs</title>
+
+    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./styles/variables.css" />
+
+<!--    <link rel="icon" href="./images/favicon.ico" sizes="any">-->
+<!--    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">-->
+<!--    <link rel="apple-touch-icon" href="./images/favicon.png">-->
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/gulpfile.js" defer></script>
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <img src="svg/logo.svg" alt="Логотип" class="header__logo">
+      <div class="header__div">
+        <nav class="header__nav">
+          <ul class="header__ul">
+            <li><a class="header__text" href="#"><span class="header__span">Курсы</span></a></li>
+            <li><a class="header__text" href="#">Статьи</a></li>
+            <li><a class="header__text" href="#">Вопросы</a></li>
+          </ul>
+        </nav>
+        <div class="header__container">
+          <button type="button" aria-label="Поиск" class="header__button-search"></button>
+          <img src="svg/user.svg" alt="Иконка пользователя" class="header__user">
+          <button type="button" aria-label="Выбор языка" class="header__button-language">RU <img src="svg/down.svg" alt="Стрелка вниз" class="header__arrow"></button>
+        </div>
+        <div class="burger">
+          <span class="burger__span"></span>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="main">
+
+      <article class="main__forms">
+        <button type="button" aria-label="Выбор языка" class="main__button">Язык <img src="svg/down-white.svg" alt="Стрелка вниз" class="main__arrow"></button>
+        <button type="button" aria-label="Фильтр" class="main__filter"><img src="svg/filter.svg" alt="Стрелка вниз" class="main__filter-ico"></button>
+
+        <img src="svg/lines.svg" alt="Палочки" class="main__lines">
+        <div class="main__form-container">
+          <p class="main__form-text">Продолжительность</p>
+          <form class="range">
+            <label class="range__label">
+                <span class="range__span">От 1 до 6 мес.</span>
+                <input type="range" name="answer" min="1" max="6" step="1" value="1"/>
+              </label>
+          </form>
+        </div>
+
+        <div class="main__form-container">
+          <p class="main__form-text">Сложность</p>
+          <form class="main__form">
+            <fieldset class="main__fieldset">
+              <label class="main__label">
+                <input class="visually-hidden" type="radio" name="answer" />
+                <span class="main__span"></span>
+                Для всех
+              </label>
+
+              <label class="main__label">
+              <input class="visually-hidden" type="radio" name="answer" />
+                <span class="main__span"></span>
+                Для начинающих
+              </label>
+
+              <label class="main__label">
+              <input class="visually-hidden" type="radio" name="answer" />
+                <span class="main__span"></span>
+                Продвинутый уровень
+              </label>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="main__form-container">
+          <p class="main__form-text">Навыки</p>
+          <form class="main__form">
+            <fieldset class="main__fieldset">
+              <label class="main__label">
+              <input class="visually-hidden" type="checkbox" name="skill" />
+                <span class="main__span"></span>
+                Грамматика
+              </label>
+
+              <label class="main__label">
+                <input class="visually-hidden" type="checkbox" name="skill" />
+                <span class="main__span"></span>
+                Лексика
+              </label>
+
+              <label class="main__label">
+                <input class="visually-hidden" type="checkbox" name="skill" />
+                <span class="main__span"></span>
+                Синтаксис
+              </label>
+
+              <label class="main__label">
+                <input class="visually-hidden" type="checkbox" name="skill" />
+                <span class="main__span"></span>
+                Фонетика
+              </label>
+
+              <label class="main__label">
+                <input class="visually-hidden" type="checkbox" name="skill" />
+                <span class="main__span"></span>
+                Пунктуация
+              </label>
+            </fieldset>
+          </form>
+        </div>
+      </article>
+
+      <article class="main__cards">
+        <h1 class="cards__title">Курсы<span class="cards__span">английского языка</span></h1>
+        <img src="svg/ellipse.svg" alt="Палочки" class="main__ellipse">
+        <img src="svg/star.svg" alt="Палочки" class="main__star">
+        <div class="cards">
+          <article class="card">
+            <h2 class="card__title">Английский шаг за шагом:<br><span class="card__span">Базовый уровень</span></h2>
+            <div class="card__name">
+              <p class="card__idea">Полина Коваленко</p>
+              <img src="svg/about-arrow.svg" alt="Стрелка" class="card__idea-arrow">
+            </div>
+            <div class="card__price">
+              <p class="card__newPrice">2940₽</p>
+              <p class="card__oldPrice">6000₽</p>
+              <p class="card__discount">-51%</p>
+            </div>
+            <div class="card__container">
+              <a class="card__about" href="#">Подробнее</a>
+              <img src="svg/arrow.svg" alt="Стрелка" class="card__arrow">
+            </div>
+            <img src="svg/english-flag.svg" alt="Британский флаг" class="card__flag">
+            <img src="svg/girl1.svg" alt="Девушка" class="card__girl">
+            <img src="svg/A-Z.svg" alt="Надпись A-Z" class="card__imageAZ">
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Английский шаг за шагом:<br><span class="card__span">Вводно-фонетический курс</span></h2>
+            <div class="card__name">
+              <p class="card__idea">Полина Коваленко</p>
+              <img src="svg/about-arrow.svg" alt="Стрелка" class="card__idea-arrow">
+            </div>
+            <div class="card__price">
+              <p class="card__newPrice">2940₽</p>
+              <p class="card__oldPrice">6000₽</p>
+              <p class="card__discount">-51%</p>
+            </div>
+            <div class="card__container">
+              <a class="card__about" href="#">Подробнее</a>
+              <img src="svg/arrow.svg" alt="Стрелка" class="card__arrow">
+            </div>
+            <img src="svg/english-flag.svg" alt="Британский флаг" class="card__flag">
+            <img src="svg/girl2.svg" alt="Девушка" class="card__girl">
+            <img src="svg/ae.svg" alt="Надпись ae" class="card__imageAE">
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Английский шаг за шагом:<br><span class="card__span">Базовый уровень</span></h2>
+            <div class="card__name">
+              <p class="card__idea">Полина Коваленко</p>
+              <img src="svg/about-arrow.svg" alt="Стрелка" class="card__idea-arrow">
+            </div>
+            <div class="card__price">
+              <p class="card__newPrice">2940₽</p>
+              <p class="card__oldPrice">6000₽</p>
+              <p class="card__discount">-51%</p>
+            </div>
+            <div class="card__container">
+              <a class="card__about" href="#">Подробнее</a>
+              <img src="svg/arrow.svg" alt="Стрелка" class="card__arrow">
+            </div>
+            <img src="svg/english-flag.svg" alt="Британский флаг" class="card__flag">
+            <img src="svg/girl1.svg" alt="Девушка" class="card__girl">
+            <img src="svg/A-Z.svg" alt="Надпись A-Z" class="card__imageAZ">
+          </article>
+
+          <article class="card">
+            <h2 class="card__title">Английский шаг за шагом:<br><span class="card__span">Вводно-фонетический курс</span></h2>
+            <div class="card__name">
+              <p class="card__idea">Полина Коваленко</p>
+              <img src="svg/about-arrow.svg" alt="Стрелка" class="card__idea-arrow">
+            </div>
+            <div class="card__price">
+              <p class="card__newPrice">2940₽</p>
+              <p class="card__oldPrice">6000₽</p>
+              <p class="card__discount">-51%</p>
+            </div>
+            <div class="card__container">
+              <a class="card__about" href="#">Подробнее</a>
+              <img src="svg/arrow.svg" alt="Стрелка" class="card__arrow">
+            </div>
+            <img src="svg/english-flag.svg" alt="Британский флаг" class="card__flag">
+            <img src="svg/girl2.svg" alt="Девушка" class="card__girl">
+            <img src="svg/ae.svg" alt="Надпись ae" class="card__imageAE">
+          </article>
+        </div>
+      </article>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__links">
+          <a class="footer__link" href="#">Политика <span>конфиденциальности</span></a>
+          <a class="footer__link" href="#">Условия пользования</a>
+        </div>
+        <img src="svg/logo-white.svg" alt="Логотип" class="footer__logo">
+      </div>
+      <p class="footer__copyright">© DailyLangs | 2023. Все права защищены</p>
+    </footer>
+
+  </body>
+
+</html>

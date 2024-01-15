@@ -2,54 +2,82 @@
 @use '../../blocks/mixin/semiBold-text'
 @use '../../blocks/mixin/medium-text'
 @use '../mixin/effects'
+@use '../mixin/media'
 
 .card
   width: 400px
-  height: 341px
+  height: 338px
   background-color: #C05AFF
   border-radius: 30px
   padding: 24px 21px 11px 22px
   position: relative
   z-index: 1
+  @include media.mediaMobile
+    width: 365px
+    height: 303px
+  @include  media.smallMobile
+    width: 300px
   &__title
     color: #FFFFFF
     @include extraBold-text.extraBold-text
     font-size: 24px
+    @include media.mediaMobile
+      font-size: 18px
   &__span
     color: #FFFD50
   &__name
     width: 184px
     height: 32px
-    margin-block-start: 19px
+    margin-block-start: 17px
     background: #C9FF50
     border-radius: 60px
-    margin-left: 120px
+    margin-left: 126px
     position: relative
     display: flex
     align-items: center
     justify-content: center
+    @include media.mediaMobile
+      width: 169px
+      height: 28px
+      margin-block-start: 34px
+    @include  media.smallMobile
+      width: 137px
+      margin-block-start: 18px
   &__idea
     color: #000
     @include semiBold-text.semiBold-text
     text-align: center
     font-size: 14px
+    @include media.mediaMobile
+      font-size: 12px
   &__idea-arrow
-    width: 18px
-    height: 18px
+    width: 20px
+    height: 20px
     position: absolute
-    top: 25px
-    left: -10px
+    top: 30px
+    left: -12px
+    @include media.mediaMobile
+      top: 24px
+      left: -14px
   &__price
     margin-block-start: 50px
-    margin-left: 90px
+    margin-left: 109px
     margin-block-end: 37px
     position: relative
+    @include media.mediaMobile
+      margin-block-start: 13px
+      margin-block-end: 50px
+    @include media.smallMobile
+      margin-left: 134px
+      margin-block-end: 35px
   &__newPrice
     color: #FFFFFF
     @include extraBold-text.extraBold-text
     font-size: 40px
     text-align: center
-    //padding-left: 30px
+    @include media.mediaMobile
+      font-size: 36px
+      margin-block-end: 5px
   &__oldPrice
     color: #FFFFFF
     @include extraBold-text.extraBold-text
@@ -57,6 +85,9 @@
     text-align: center
     padding-left: 120px
     text-decoration: red line-through
+    @include media.mediaMobile
+      font-size: 18px
+      padding-left: 77px
   &__discount
     color: #FFFFFF
     @include semiBold-text.semiBold-text
@@ -67,16 +98,21 @@
     border-radius: 199px
     background: #FF50BA
     position: absolute
-    top: 30px
-    right: 10px
+    top: 28px
+    right: 5px
     display: flex
     justify-content: center
     align-items: center
+    @include media.smallMobile
+      top: 44px
+      right: 53px
   &__container
     display: flex
     gap: 5px
     align-items: end
     justify-content: flex-end
+    @include media.mediaMobile
+      gap: 13px
   &__about
     color: #FFFFFF
     @include medium-text.medium-text
@@ -85,6 +121,8 @@
     @include effects.focus-visible
     text-decoration: none
     //padding-top: 130px
+    @include media.mediaMobile
+      font-size: 14px
   &__arrow
     width: 18px
     height: 18px
@@ -92,8 +130,15 @@
     width: 66px
     height: 66px
     position: absolute
-    top: calc(263px - 24px)
-    left: calc(144px - 22px)
+    top: 262px
+    left: 146px
+    @include media.mediaMobile
+      top: 242px
+      left: 133px
+      width: 50px
+      height: 50px
+    @include media.smallMobile
+      left: 109px
   &__girl
     width: 213px
     height: 255px
@@ -101,10 +146,33 @@
     left: 0
     bottom: 0
     z-index: -1
-  &__image
+    @include media.mediaMobile
+      width: 187px
+      height: 223px
+  &__imageAZ
     position: absolute
-    width: 234px
-    height: 154px
-    top: 35px
+    width: 251px
+    height: 183px
+    top: 21px
     left: 120px
     z-index: -2
+    @include media.mediaMobile
+      width: 204px
+      height: 170px
+      top: 5px
+      left: 126px
+    @include media.smallMobile
+      width: 169px
+  &__imageAE
+    position: absolute
+    width: 156px
+    height: 183px
+    top: 52px
+    left: 228px
+    z-index: -2
+    @include media.mediaMobile
+      width: 149px
+      top: -1px
+      left: 179px
+    @include  media.smallMobile
+      width: 110px

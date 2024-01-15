@@ -1,11 +1,16 @@
 @use '../../blocks/mixin/medium-text'
 @use '../mixin/effects'
+@use '../mixin/media'
 
 .footer
   background-color: #C05AFF
-  margin-block-start: 57px
+  margin-block-start: 100px
   padding-block-start: 55px
-  padding-block-end: 55px
+  padding-block-end: 45px
+  @include media.mediaMobile
+    padding: 18px
+    margin-block-start: 61px
+    min-height: 162px
   &__content
     display: flex
     justify-content: space-between
@@ -13,10 +18,17 @@
     align-items: center
     margin-left: 120px
     margin-right: 120px
+    @include media.mediaMobile
+      justify-content: space-between
+      margin-right: 0
+      margin-left: 0
+      margin-block-end: 28px
   &__links
     display: flex
     flex-direction: column
     gap: 13px
+    @include media.mediaMobile
+      gap: 19px
   &__link
     color: #FFFFFF
     text-decoration: none
@@ -24,10 +36,19 @@
     @include effects.focus
     @include effects.focus-visible
     @include effects.hover
+    @include media.mediaMobile
+      font-size: 14px
+      display: flex
+      flex-direction: column
   &__logo
     width: 223px
     height: 43px
+    @include media.mediaMobile
+      width: 125px
+      height: 25px
   &__copyright
     text-align: center
     color: #FFFFFF
     @include medium-text.medium-text
+    @include media.mediaMobile
+      font-size: 14px

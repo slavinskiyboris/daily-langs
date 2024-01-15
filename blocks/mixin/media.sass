@@ -1,5 +1,11 @@
+$smallMobile: 320px
 $mobile: 768px
 $tablet: 1024px
+$laptop: 1350px
+
+@mixin smallMobile
+  @media (width <= $smallMobile)
+    @content
 
 @mixin mediaMobile
   @media (width < $mobile)
@@ -9,6 +15,10 @@ $tablet: 1024px
   @media (width < $tablet)
     @content
 
+@mixin mediaLaptop
+  @media (width < $laptop)
+    @content
+
 @mixin mediaDesktop
-  @media (width > $tablet)
+  @media (width > $laptop)
     @content

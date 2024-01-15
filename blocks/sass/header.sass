@@ -9,10 +9,22 @@
   margin-block-start: 48px
   margin-block-end: 67px
   margin-left: 120px
-  margin-right: 120px
+  margin-right: 110px
+  @include media.mediaLaptop
+    margin-left: 0
+    margin-right: 0
+    justify-content: space-around
+  @include media.mediaMobile
+
+    margin-block-start: 32px
+    //gap: 147px
+    margin-block-end: 52px
   &__logo
     width: 223px
     height: 43px
+    @include media.mediaMobile
+      width: 131px
+      height: 27px
   &__nav
     align-items: center
     display: flex
@@ -31,6 +43,8 @@
   &__ul
     display: flex
     column-gap: 71px
+    @include media.mediaLaptop
+      column-gap: 30px
     @include media.mediaTablet
       flex-direction: column
       row-gap: 30px
@@ -46,6 +60,9 @@
   &__div
     display: flex
     gap: 61px
+    align-items: center
+    @include media.mediaTablet
+      gap: 18px
   &__container
     display: flex
     gap: 21px
@@ -67,6 +84,9 @@
     height: 51px
     background-color: #C05AFF
     border-radius: 50px
+    @include media.mediaMobile
+      width: 33px
+      height: 33px
     &_item
       width: 51px
       height: 51px

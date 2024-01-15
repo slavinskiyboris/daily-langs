@@ -1,17 +1,43 @@
 @use '../../blocks/mixin/extraBold-text'
+@use '../mixin/media'
 
 .cards
   display: flex
   flex-wrap: wrap
   column-gap: 60px
   row-gap: 30px
+  @include  media.mediaLaptop
+    justify-content: center
+    padding: 20px
+    padding-top: 0
+  @include media.mediaTablet
+    row-gap: 18px
   &__title
     color: #000
     @include extraBold-text.extraBold-text
     margin-block-end: 76px
+    width: 980px
+    @include media.mediaLaptop
+      display: flex
+      justify-content: center
+    @include media.mediaTablet
+      justify-content: flex-start
+      margin-left: 14px
+    @include media.mediaMobile
+      font-size: 32px
+      flex-direction: column
+      gap: 8px
+      margin-block-end: 49px
+    @include media.smallMobile
+      font-size: 25px
   &__span
-    width: 516px
+    max-width: 516px
     height: 79px
     border-radius: 100px
     background: #C9FF50
     padding: 7px 14px 14px 13px
+    @include media.mediaMobile
+      width: 365px
+      height: 57px
+    @include  media.smallMobile
+      width: 290px

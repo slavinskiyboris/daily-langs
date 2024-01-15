@@ -1,9 +1,8 @@
+@use '../mixin/text-mixin'
+$font-size: 18px
+$font-weigh: 600
+
 @mixin semiBold-text
-  font-size: 18px
-  font-style: normal
-  font-weight: 600
-  line-height: 120% /* 21.6px */
-  letter-spacing: 0.18px
-  font-family: Mulish, serif
-  @supports (font-variation-settings: normal)
-    font-family: Mulish-Variable, serif
+  font-size: $font-size
+  font-weight: $font-weigh
+  @include text-mixin.text-mixin

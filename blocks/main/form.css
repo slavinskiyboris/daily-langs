@@ -1,0 +1,71 @@
+input[type='radio'] + span {
+    border-radius: 50%;
+}
+
+input[type='radio']:checked + span,
+input[type='checkbox']:checked + span {
+    background-color: #C05AFF;
+}
+
+input[type='radio']:focus-visible + span,
+input[type='checkbox']:focus-visible + span {
+    outline: 1px solid #000;
+}
+
+input[type='range'] {
+    width: 90%;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type='range']:focus {
+    outline: none;
+}
+
+input[type='range']:focus-visible {
+    outline: 2px solid #C05AFF;
+    outline-offset: 2px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    width: 90%;
+    height: 2px;
+    border: none;
+    border-radius: 0;
+    background-color: #C05AFF;
+    cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    margin-top: -5px;
+    border: 1px solid #C05AFF;
+    border-radius: 50px;
+    background-color: #C05AFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type='range']::-moz-range-track {
+    width: 90%;
+    height: 2px;
+    border: none;
+    border-radius: 0;
+    background-color: #C05AFF;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #C05AFF;
+    border-radius: 50px;
+    background: #C05AFF;
+    cursor: pointer;
+}
